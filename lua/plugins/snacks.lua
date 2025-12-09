@@ -4,7 +4,7 @@ return {
     opts = {
       indent = { enable = false },
       terminal = {
-        shell = "pwsh.exe",
+        shell = vim.fn.has("win32") == 1 and "pwsh.exe" or "fish",
       },
       picker = {
         sources = {
